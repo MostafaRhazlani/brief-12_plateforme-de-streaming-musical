@@ -1,3 +1,8 @@
+<?php
+    $person = new PersonController;
+    $person->createUser();
+?>
+
 <div class="wrapper">
     <section class="login-content overflow-hidden">
         <div class="row no-gutters align-items-center bg-white">
@@ -17,48 +22,48 @@
                             <div class="card-body">
                                 <h2 class="mb-2 text-center">Sign Up</h2>
                                 <p class="text-center">Create your Muzik account.</p>
-                                <form>
+                                <form method="POST" action="?page=auth/register">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="full-name" class="form-label">Full Name</label>
-                                                <input type="text" class="form-control" id="full-name" placeholder="John">
+                                                <input type="text" name="fullName" class="form-control" id="full-name" placeholder="John">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="last-name" class="form-label">Username</label>
-                                                <input type="text" class="form-control" id="last-name" placeholder="Doe">
+                                                <input type="text" name="username" class="form-control" id="last-name" placeholder="Doe">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="email" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="email" placeholder="xyz@example.com">
+                                                <input type="email" name="email" class="form-control" id="email" placeholder="xyz@example.com">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="phone" class="form-label">Phone No.</label>
-                                                <input type="text" class="form-control" id="phone" placeholder="123456789">
+                                                <input type="text" name="phone" class="form-control" id="phone" placeholder="123456789">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="password" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="password" placeholder=" ">
+                                                <input type="password" name="password" class="form-control" id="password" placeholder=" ">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="confirm-password" class="form-label">Confirm Password</label>
-                                                <input type="text" class="form-control" id="confirm-password" placeholder=" ">
+                                                <input type="password" class="form-control" name="confirm_password" id="confirm-password" placeholder=" ">
                                             </div>
                                         </div>
                                         <div class="col-lg-12 d-flex justify-content-center">
-                                            <div class="form-check mb-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck1">
-                                                <label class="form-check-label" for="customCheck1">I agree with the terms of use</label>
+                                            <div class="form-check form-switch mb-5">
+                                                <input class="form-check-input" type="checkbox" name="role" role="switch" id="flexSwitchCheckDefault">
+                                                <label class="form-check-label" for="flexSwitchCheckDefault">Turn on this if you interstend in becoming an artist</label>
                                             </div>
                                         </div>
                                     </div>
