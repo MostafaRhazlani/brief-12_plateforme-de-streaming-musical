@@ -19,11 +19,7 @@
             $this->role = $role;
         }
         
-        public function checkUserExist() {
-            $sql = "SELECT * FROM users WHERE email = ?";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->bindValue(1, $this->conn, PDO::PARAM_STR);
-        }
+        
         
     }
 
