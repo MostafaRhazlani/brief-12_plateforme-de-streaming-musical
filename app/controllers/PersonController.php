@@ -42,4 +42,36 @@
                 
             }
         }
+
+        public function login() {
+            if($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $this->userModel->setEmail($_POST['email']);
+                $this->userModel->setPassword($_POST['password']);
+                $person = $this->userModel->verfyAccountExist();
+
+                if(empty($this->userModel->getEmail()) || empty($this->userModel->getPassword())) {
+                    $this->errors = 1;
+                }
+
+                if(!password_verify($this->userModel->getPassword(), $person['password'])) {
+                    $this->errors = 1;
+                }
+
+                if(empty($this->errors)) {
+                    if(isset($person)) {
+                        if($person['role'] === 'Admin') {
+                            $this->redirect('add');
+                        } else if($person['role'] === 'Artist') {
+                            $this->redirect('update');
+                        } else {
+                            $this->redirect('home');
+                        }
+                    } else {
+                        $this->redirect('auth/login');
+                    }
+                } else {
+                    $this->redirect('auth/login');
+                }
+            }
+        }
     }

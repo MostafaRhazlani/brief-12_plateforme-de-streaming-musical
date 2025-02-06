@@ -1,3 +1,8 @@
+<?php
+    $person = new PersonController;
+    $person->login();
+?>
+
 <div class="wrapper">
     <section class="login-content overflow-hidden">
         <div class="row no-gutters align-items-center bg-white">
@@ -15,18 +20,18 @@
                             <div class="card-body">
                                 <h2 class="mb-2 text-center">Sign In</h2>
                                 <p class="text-center">Login to stay connected.</p>
-                                <form>
+                                <form method="POST" action="?page=auth/login">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label for="email" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="xyz@example.com">
+                                                <input type="email" name="email" class="form-control" id="email" aria-describedby="email" placeholder="xyz@example.com">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label for="password" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="password" aria-describedby="password" placeholder="xxxx">
+                                                <input type="password" name="password" class="form-control" id="password" aria-describedby="password" placeholder="xxxx">
                                             </div>
                                         </div>
                                         <div class="col-lg-12 d-flex justify-content-between">

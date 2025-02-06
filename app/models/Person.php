@@ -85,6 +85,14 @@
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
+
+        public function verfyAccountExist() {
+            $sql = "SELECT * FROM users WHERE email = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindValue(1, $this->email, PDO::PARAM_STR);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
         
     }
 ?>
