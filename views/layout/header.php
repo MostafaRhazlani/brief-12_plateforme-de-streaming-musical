@@ -15,6 +15,8 @@
     <!-- Library / Plugin Css Build -->
     <link rel="stylesheet" href="/public/css/core/libs.min.css">
 
+    <link rel="stylesheet" href="/public/vendor/sheperd/dist/css/sheperd.css">
+
     <!-- muzik Design System Css -->
     <link rel="stylesheet" href="/public/css/muzik.minf700.css?v=1.0.1">
 
@@ -28,6 +30,8 @@
 
     <!-- RTL Css -->
     <link rel="stylesheet" href="/public/css/rtl.minf700.css?v=1.0.1">
+
+    <link rel="stylesheet" href="../assets/vendor/swiperSlider/swiper-bundle.min.css">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">

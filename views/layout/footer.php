@@ -1,10 +1,17 @@
     <!-- Library Bundle Script -->
     <script src="/public/js/core/libs.min.js"></script>
     <!-- Plugin Scripts -->
-    
+    <!-- Tour plugin Start -->
+    <script src="/public/vendor/sheperd/dist/js/sheperd.min.js"></script>
+    <script src="/public/js/plugins/tour.js" defer></script>
+
     <!-- Slider-tab Script -->
     <script src="/public/js/plugins/slider-tabs.js"></script>
     
+    <!-- SwiperSlider Script -->
+    <script src="/public/vendor/swiperSlider/swiper-bundle.min.js"></script>
+    <script src="/public/js/plugins/swiper-slider.js" defer></script>
+
     <!-- Lodash Utility -->
     <script src="/public/vendor/lodash/lodash.min.js"></script>
     <!-- Utilities Functions -->
