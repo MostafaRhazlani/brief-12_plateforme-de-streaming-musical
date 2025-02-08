@@ -59,10 +59,11 @@
 
                 if(empty($this->errors)) {
                     if(isset($person)) {
+                        $_SESSION['user'] = $person;
                         if($person['role'] === 'Admin') {
-                            $this->redirect('add');
+                            $this->redirect('admin/dashboard');
                         } else if($person['role'] === 'Artist') {
-                            $this->redirect('update');
+                            $this->redirect('artist/dashboard');
                         } else {
                             $this->redirect('home');
                         }
