@@ -1,7 +1,7 @@
 <aside class="sidebar sidebar-base sidebar-white sidebar-default  " id="first-tour"
     data-toggle="main-sidebar" data-sidebar="responsive">
     <div class="sidebar-header d-flex align-items-center justify-content-center">
-        <a href="index.html" class="navbar-brand">
+        <a href="?page=home" class="navbar-brand">
 
             <!--Logo start-->
             <div class="logo-main">
@@ -99,7 +99,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link "
-                                href="albums.html">
+                                href="?page=albums">
                                 <i class="icon">
                                     <svg class="icon-10" width="10" viewBox="0 0 24 24" fill="currentColor"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -165,7 +165,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link "
-                                href="admin/admin-category.html">
+                                href="?page=admin/category">
                                 <i class="icon svg-icon">
                                     <svg class="icon-10" width="10" viewBox="0 0 24 24" fill="currentColor"
                                         xmlns="http://www.w3.org/2000/svg">
