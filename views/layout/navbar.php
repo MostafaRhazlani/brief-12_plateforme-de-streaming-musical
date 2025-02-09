@@ -2,7 +2,7 @@
     <!--Nav Start-->
     <nav class="nav navbar navbar-expand-xl navbar-light iq-navbar">
         <div class="container-fluid navbar-inner">
-            <a href="../index.html" class="navbar-brand">
+            <a href="?page=home" class="navbar-brand">
 
                 <!--Logo start-->
                 <div class="logo-main">
@@ -28,7 +28,7 @@
                         <ul class="iq-nav-menu list-unstyled">
                             <li class="nav-item">
                                 <a class="nav-link " aria-current="page"
-                                    href="../index.html">
+                                    href="?page=home">
                                     <span class="item-name">Home</span>
                                 </a>
                             </li>
