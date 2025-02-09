@@ -6,7 +6,15 @@
                     <img src="/public/images/error/06.png" class="img-fluid w-50">
                     <h2 class="mb-0 mt-4 ">Oops! This Page is Not Found.</h2>
                     <p class="mt-2 mb-4">The requested page dose not exist.</p>
-                    <a class="btn btn-primary" href="/index.php">Back to Home</a>
+                    <?php if(isset($_SESSION['user'])) : ?>
+                        <?php if($_SESSION['user']['role'] == 'Admin') { ?>
+                            <a class="btn btn-primary" href="?page=admin/dashboard">Back to Home</a>
+                        <?php } else if ($_SESSION['user']['role'] == 'Artist') {  ?>
+                            <a class="btn btn-primary" href="?page=artist/dashboard">Back to Home</a>
+                        <?php } else { ?>
+                            <a class="btn btn-primary" href="?page=home ">Back to Home</a>
+                        <?php } ?>
+                    <?php endif ?>
                 </div>
             </div>
         </div>
