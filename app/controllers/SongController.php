@@ -15,6 +15,14 @@
             }
         }
 
+        public function getSong() {
+            if(isset($_GET['idSong'])) {
+                $idSong = $_GET['idSong'];
+                $this->songModel->setId($idSong);
+                return $this->songModel->getByOne();
+            }
+        }
+
         public function createSong() {
             if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                 $this->songModel->setNameSong($_POST['nameSong']);

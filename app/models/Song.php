@@ -82,6 +82,17 @@
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
+        public function getByOne() {
+            $sql = 'SELECT * FROM songs
+                    JOIN categories ON categories.idCategory = songs.idCategory
+                    JOIN users ON users.iduser = songs."idArtist"
+                    WHERE idsong = ?';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindValue(1, $this->id, PDO::PARAM_STR);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
+
         public function create() {
             $sql = 'INSERT INTO songs (nameSong, imageSong, "idArtist", idcategory, song) VALUES (?,?,?,?,?)';
             $stmt = $this->conn->prepare($sql);
